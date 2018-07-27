@@ -14,6 +14,7 @@ namespace CarStats.Droid
     {
         protected override void OnCreate(Bundle bundle)
         {
+            Init.Initialize();
             TabLayoutResource = Resource.Layout.Tabbar;
             ToolbarResource = Resource.Layout.Toolbar;
 

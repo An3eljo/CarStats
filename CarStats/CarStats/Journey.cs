@@ -9,5 +9,13 @@ namespace CarStats
         public DateTime StartDate;
         public string Name;
         public TimeSpan Duration;
+
+        public Journey() { }
+
+        public Journey(string name, DateTime startDate)
+        {
+            this.Name = name;
+            this.StartDate = startDate;
+        }
     }
 }

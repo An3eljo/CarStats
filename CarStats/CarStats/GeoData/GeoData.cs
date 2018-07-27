@@ -8,7 +8,7 @@ namespace CarStats
     public class GeoData
     {
         public DateTime CaptureTime;
-        public ILocation Location;
+        public Location Location;
 
         public GeoData() { }
 

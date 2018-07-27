@@ -19,16 +19,14 @@
     <Compile Include="$(MSBuildThisFileDirectory)GeoData\GeoData.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)GeoData\GeoDataHandler.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Init.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)Interfaces\ILocation.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Interfaces\ILocationHandler.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Interfaces\IManifestData.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Journey.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)JourneyCollection.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Location.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)XmlActions.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="$(MSBuildThisFileDirectory)GeoData\" />
   </ItemGroup>
 </Project>

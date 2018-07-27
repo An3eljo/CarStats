@@ -4,8 +4,8 @@ using System.Text;
 
 namespace CarStats.Interfaces
 {
-    public interface ILocation
+    interface ILocationHandler
     {
-        
+        Location GetLastLocationFromDevice();
     }
 }

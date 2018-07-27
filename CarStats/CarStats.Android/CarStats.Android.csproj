@@ -62,10 +62,11 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Location.cs" />
+    <Compile Include="Init.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Specific\LocationHandler.cs" />
     <Compile Include="Specific\ManifestData.cs" />
   </ItemGroup>
   <ItemGroup>
