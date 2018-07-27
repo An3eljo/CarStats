@@ -5,7 +5,13 @@
              x:Class="CarStats.MainPage">
 
     <Grid>
-
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="4*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Button Text="" x:Name="ButtonStartStop" Clicked="ButtonStartStop_OnClicked"></Button>
+        </Grid>
     </Grid>
 
 </ContentPage>

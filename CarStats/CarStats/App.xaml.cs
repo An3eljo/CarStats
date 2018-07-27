@@ -10,8 +10,8 @@ namespace CarStats
 		public App ()
 		{
 			InitializeComponent();
-
-			MainPage = new MainPage();
+            Init.Initialize();
+            MainPage = new MainPage();
 		}
 
 		protected override void OnStart ()
