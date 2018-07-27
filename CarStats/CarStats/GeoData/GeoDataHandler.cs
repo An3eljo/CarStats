@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using CarStats.Interfaces;
+using Xamarin.Forms;
 
 namespace CarStats
 {
@@ -42,7 +44,7 @@ namespace CarStats
         }
 
 
-        public static int? AddGeoDataToJourney(GeoData geoData, ref Journey journey)
+        public static int? AddGeoDataToJourney(GeoData geoData, Journey journey)
         {
             var journeyToCompare = journey;
             if (!JourneyCollection.Instance.Exists(j => j == journeyToCompare))
@@ -57,7 +59,7 @@ namespace CarStats
             return journey.IndexOf(geoData);
         }
 
-        public static void AddLocationToGeoData(Location location, ref GeoData geoData)
+        public static void AddLocationToGeoData(GeoData geoData, Location location = null)
         {
             if (geoData == null)
             {
@@ -65,7 +67,8 @@ namespace CarStats
             }
             if (location == null)
             {
-                return;
+                location = DependencyService.Get<ILocationHandler>(DependencyFetchTarget.NewInstance)
+                    .GetLastLocationFromDevice();
             }
             geoData.Location = location;
         }

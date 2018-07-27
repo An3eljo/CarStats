@@ -2,10 +2,12 @@
 
 using Android.App;
 using Android.Content.PM;
+using Android.Locations;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
+using CarStats.Droid.Specific;
 
 namespace CarStats.Droid
 {
@@ -14,14 +16,19 @@ namespace CarStats.Droid
     {
         protected override void OnCreate(Bundle bundle)
         {
-            Init.Initialize();
             TabLayoutResource = Resource.Layout.Tabbar;
             ToolbarResource = Resource.Layout.Toolbar;
 
             base.OnCreate(bundle);
+            Initialize();
 
             global::Xamarin.Forms.Forms.Init(this, bundle);
             LoadApplication(new App());
+        }
+
+        public void Initialize()
+        {
+            LocationHandler.LocationManager = GetSystemService(LocationService) as LocationManager;
         }
     }
 }
